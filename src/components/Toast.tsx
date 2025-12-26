@@ -12,7 +12,7 @@ interface ToastProps {
 
 export const Toast: React.FC<ToastProps> = ({
   message,
-  type = 'info',
+  type = 'error',
   duration = 3000,
   onClose,
   closable = false,
@@ -48,12 +48,12 @@ export const Toast: React.FC<ToastProps> = ({
         color: '#fff',
         background:
           type === 'success'
-            ? '#4caf50'
+            ? '#2e7d32'
             : type === 'error'
-            ? '#f44336'
+            ? '#b71c1c' 
             : type === 'warning'
-            ? '#ff9800'
-            : '#2196f3',
+            ? '#a04000' 
+            : '#0d47a1', 
         boxShadow: '0 2px 8px rgba(0,0,0,0.15)',
         zIndex: 9999,
         transition: 'opacity 0.3s, transform 0.3s',
