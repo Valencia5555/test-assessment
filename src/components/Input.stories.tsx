@@ -27,20 +27,32 @@ export const Password: Story = {
 export const PasswordWithToggle: Story = {
   render: () => {
     const [value, setValue] = useState('');
-    return <Input type="password" value={value} onChange={setValue} placeholder="Password" clearable />;
+    return (
+      <div style={{ position: 'relative' }}>
+        <Input
+          type="password"
+          value={value}
+          onChange={setValue}
+          placeholder="Password"
+          clearable
+          style={{ zIndex: 1 }}
+          className="inputField2"
+        />
+      </div>
+    );
   },
 };
 
 export const Number: Story = {
   render: () => {
     const [value, setValue] = useState('');
-    return <Input type="number" value={value} onChange={setValue} placeholder="Number" />;
+    return <Input type="number" value={value} onChange={setValue} placeholder="Number"  style={{paddingRight: '14px'}} />;
   },
 };
 
 export const ClearableText: Story = {
   render: () => {
     const [value, setValue] = useState('');
-    return <Input value={value} onChange={setValue} placeholder="Clearable text" clearable />;
+    return <Input value={value} onChange={setValue} placeholder="Clearable text" clearable style={{paddingRight: '14px'}} />;
   },
 };
